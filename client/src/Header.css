@@ -1,0 +1,127 @@
+.header-root {
+    background: linear-gradient(135deg, #121112, #3f3c4e);
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header-logo:hover {
+    color: #3498db;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.header-nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.header-nav-link:hover {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+.header-nav-link.active {
+    background: #3498db;
+    color: white;
+}
+
+.header-logout-btn {
+    cursor: pointer;
+    color: #e74c3c !important;
+}
+
+.header-logout-btn:hover {
+    background: rgba(231, 76, 60, 0.1) !important;
+}
+
+.header-search-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 8px 15px;
+    max-width: 300px;
+}
+
+.header-search-icon {
+    color: rgba(255, 255, 255, 0.8);
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.header-search-bar {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    padding: 5px;
+    outline: none;
+}
+
+.header-search-bar::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Hover effects */
+.header-search-container:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.header-search-bar:focus {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .header-logo {
+        font-size: 1.5rem;
+    }
+
+    .header-nav-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .header-search-container {
+        width: 100%;
+        max-width: none;
+        margin-top: 10px;
+    }
+}
