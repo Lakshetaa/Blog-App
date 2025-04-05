@@ -1,8 +1,7 @@
 import React from "react";
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route , Navigate } from "react-router-dom";
 import { UserContextProvider } from "./UserContext";
-import IndexPage from "./Pages/IndexPage";
 import RegisterPage from "./Pages/RegistrationPage";
 import LoginPage from "./Pages/LoginPage";
 import HomePage from "./Pages/HomePage";
@@ -21,7 +20,7 @@ const App = () => {
           <main className="app-main">
             <Header />
             <Routes>
-                <Route path="/" element={<IndexPage />} />
+                <Route path="/" element={<Navigate to="/home" />} />
                 <Route path="/home" element={<HomePage />} />
                 <Route path="/register" element={<RegisterPage />} />
                 <Route path="/login" element={<LoginPage />} />

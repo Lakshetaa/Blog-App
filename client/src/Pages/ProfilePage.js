@@ -18,7 +18,7 @@ const ProfilePage = () => {
 
   const fetchProfile = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/profile/${userInfo.username}`, {
+      const response = await fetch(`https://blog-app-25of.onrender.com/profile/${userInfo.username}`, {
         credentials: 'include'
       });
       const data = await response.json();

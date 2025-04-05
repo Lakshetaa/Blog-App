@@ -24,7 +24,7 @@ const MyBlogPage = () => {
         throw new Error('Please log in to view your blogs');
       }
 
-      const response = await fetch('http://localhost:4000/post', {
+      const response = await fetch('https://blog-app-25of.onrender.com/post', {
         credentials: 'include'
       });
 
@@ -58,7 +58,7 @@ const MyBlogPage = () => {
   const handleEditSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:4000/post/${editingBlog._id}`, {
+      const response = await fetch(`https://blog-app-25of.onrender.com/post/${editingBlog._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ const MyBlogPage = () => {
   const handleDelete = async (blogId) => {
     if (window.confirm('Are you sure you want to delete this blog post?')) {
       try {
-        const response = await fetch(`http://localhost:4000/post/${blogId}`, {
+        const response = await fetch(`https://blog-app-25of.onrender.com/post/${blogId}`, {
           method: 'DELETE',
           credentials: 'include',
         });
@@ -151,7 +151,7 @@ const MyBlogPage = () => {
             <div key={blog._id} className="myblog-card">
               {blog.cover && (
                 <img 
-                  src={`http://localhost:4000/${blog.cover}`}
+                  src={`https://blog-app-25of.onrender.com/${blog.cover}`}
                   alt={blog.title}
                   className="myblog-image"
                   onError={(e) => {

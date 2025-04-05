@@ -8,7 +8,7 @@
   "main": "Index.js",
   "scripts": {
     "start": "node Index.js",
-  "dev": "nodemon Index.js",
+    "dev": "nodemon Index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

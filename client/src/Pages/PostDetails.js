@@ -11,7 +11,7 @@ const PostDetails = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await fetch(`http://localhost:4000/post/${id}`);
+        const res = await fetch(`https://blog-app-25of.onrender.com/post/${id}`);
         const data = await res.json();
         console.log(data);
         setPost(data);

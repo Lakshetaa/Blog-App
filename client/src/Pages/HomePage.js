@@ -11,7 +11,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('http://localhost:4000/post');
+        const response = await fetch('https://blog-app-25of.onrender.com/post');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -69,7 +69,7 @@ const HomePage = () => {
               <article key={post._id} className="home-post-card">
                 {post.cover && (
                   <img 
-                    src={`http://localhost:4000/${post.cover}`}
+                    src={`https://blog-app-25of.onrender.com/${post.cover}`}
                     alt={post.title}
                     className="home-post-image"
                     onError={(e) => {
