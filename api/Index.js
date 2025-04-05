@@ -5,7 +5,8 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 const session = require('express-session');
 const app = express();
-
+const morgan = require('morgan');
+app.use(morgan('dev'));
 app.use(cors({
     origin: 'http://localhost:3000',
     credentials: true
@@ -194,6 +195,21 @@ app.get('/post', async (req, res) => {
     } catch (error) {
         console.error('Error fetching blogs:', error);
         res.status(500).json({ message: 'Error fetching blogs' });
+    }
+});
+
+app.get('/post/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        console.log(id)
+        const blog = await Blog.findById(id);
+        if (!blog) {
+            return res.status(404).json({ message: 'Blog post not found' });
+        }
+        res.json(blog);
+    } catch (error) {
+        console.error('Error fetching blog:', error);
+        res.status(500).json({ message: 'Error fetching blog post' });
     }
 });
 

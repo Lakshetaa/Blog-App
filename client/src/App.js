@@ -11,6 +11,7 @@ import BlogPage from "./Pages/MyBlogPage";
 import SubscriptionPage from "./Pages/SubscriptionPage";
 import ProfilePage from "./Pages/ProfilePage";
 import Header from "./Header";
+import PostDetails from "./Pages/PostDetails";
 
 const App = () => {
   return (
@@ -28,7 +29,8 @@ const App = () => {
                 <Route path="/create" element={<CreateBlogPage />} />
                 <Route path="/subscription" element={<SubscriptionPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
-            </Routes>
+                <Route path="/post" element={<PostDetails />} />
+              </Routes>
           </main>
         </div>
       </Router>

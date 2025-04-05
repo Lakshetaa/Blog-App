@@ -105,7 +105,7 @@ const HomePage = () => {
                       </span>
                     )}
                   </div>
-                  <Link to={`/post/${post._id}`} className="home-post-link">
+                  <Link to={`/post`}  state={{ postId: post._id }} className="home-post-link">
                     Read More
                   </Link>
                 </div>
