@@ -7,7 +7,12 @@ const session = require('express-session');
 const app = express();
 const morgan = require('morgan');
 app.use(morgan('dev'));
-app.use(cors());
+const allowedOrigins = ['https://blog-app-two-hazel.vercel.app'];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 
 app.use(express.json());
 
